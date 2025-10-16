@@ -1529,7 +1529,7 @@ docker compose up -d
 ```
 
 Now, open a separate browser tab and test the connection to the server:
-http://<hands-on-ip>:8080
+http://\<hands-on-ip>:8080
 
 <img src="./img/base-lunch-menu.png" width=50%>
 
@@ -1549,7 +1549,7 @@ a few more things we want to do:
 > and what are the major components of the system prompt back in Task 4.
 
 For our job, we'll add a `Simple Memory` node to the workflow. It will be used to
-persist short-term chat history and enable context-awareness in AI workflows:
+persist short-term chat history and enable context-awareness in AI workflows.
 
 The Simple Memory node:
 
