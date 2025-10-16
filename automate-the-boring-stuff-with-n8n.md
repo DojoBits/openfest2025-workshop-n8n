@@ -282,7 +282,7 @@ so we'll generate one explicitly:
 > a registered DNS name, it is fairly easy to generate a signed/trusted certificate
 > using the free and public Let's Encrypt service through the ACME client. This
 > could be done in various ways, including by using a reverse proxy like
-> Traefik. This part of the setup we've included in this workshop, but we
+> Traefik. This part of the setup we've not included in this workshop, but we
 > demonstrate in other workshops, available in our Git organization, which you
 > could use as a reference.
 
@@ -444,16 +444,21 @@ As part of our setup, we'll provide a value for the N8N_ENCRYPTION_KEY. That
 is a 32-byte random string used to encrypt and decrypt sensitive credentials securely
 (api tokens, passwords, logins, etc.) that are stored inside the n8n database:
 
-> [!Warning] Changing or losing the encryption key will lock the stored credentials
+> [!Warning]
+> Changing or losing the encryption key will lock the stored credentials
 > and it will have to recreate them!
 
 ```shell
 openssl rand -hex 32
+```
+
+```shell
 319400d1ec5486f04c05f73b3db525b77c83af119987b6d7ca96b04b0f26252c
 $
 ```
 
-Our compose file uses parameter references. We'll store them inside an .env file:
+Our compose file uses parameter references. We'll store them inside an .env file. Please don't forget
+to update your encryption key!
 
 ```shell
 nano .env && cat $_
@@ -469,7 +474,7 @@ N8N_DATA_DIR=/home/ubuntu/n8n/data
 N8N_FILES_DIR=/home/ubuntu/n8n/files
 N8N_CERTS_DIR=/home/ubuntu/n8n/certs
 WEBHOOK_URL="https://n8n.mydomain.com"
-N8N_ENCRYPTION_KEY="319400d1ec5486f04c05f73b3db525b77c83af119987b6d7ca96b04b0f26252c"
+N8N_ENCRYPTION_KEY="<encryption_key>"
 
 POSTGRES_DB=n8n
 POSTGRES_USER=n8n
@@ -490,7 +495,6 @@ docker compose up -d
 ```
 
 ```shell
-docker compose up -d
 [+] Running 3/3
  ✔ Network n8n_n8n-network  Created                                             0.1s
  ✔ Container n8n            Started                                             0.6s
