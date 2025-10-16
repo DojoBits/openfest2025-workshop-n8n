@@ -521,6 +521,9 @@ https://n8n.mydomain.com
 $
 ```
 
+The `-f` (follow) docker option trigger continuous watch for new container logs.
+To exit and return back to the shell, press `CTRL+C`.
+
 During the setup, we've generated a self-signed certificate and configured the
 N8N_HOST environment variable (used for public access for webhooks, redirects, etc).
 If we have control over the DNS server, we could create an 'A' record (and PTR) for our
@@ -541,7 +544,7 @@ This will create a new record in the `/etc/hosts` file. Now we can test the conn
 using the `curl` command:
 
 ```shell
-url -k https://n8n.mydomain.com:5678
+curl -k https://n8n.mydomain.com:5678
 ```
 
 You should get a similar output (truncated here):
