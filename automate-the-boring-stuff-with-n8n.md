@@ -1073,7 +1073,7 @@ replaced with the actual values.
 > In programming, call this dynamic replacement of value references (placeholders)
 > string interpolation
 
-We return the mini script with the statement:
+We finish the mini script with the statement:
 
 ```javascript
 return [{ json: { message } }];
@@ -1086,7 +1086,7 @@ for passing structured JSON data between nodes in n8n workflows.
 
 Let's test whether it works. Click on the `Execute step` button:
 
-<img src="./img/n8n-code-block-format-weather.png" width=50%>
+<img src="./img/n8n-code-block-format-weather.png" width=80%>
 
 In the `OUTPUT` section, we should now see a JSON-serialized structure with a
 key called `message` and the value, the string we've returned by our return
@@ -1101,7 +1101,7 @@ close the credential dialog (X). In the main `Send a text message` node settings
 window, set the value for the Chat ID that we've extracted earlier. Click on
 `Execute step` to test the configuration.
 
-<img src="./img/n8n-telegram-node-weather.png" width=50%>
+<img src="./img/n8n-telegram-node-weather.png" width=80%>
 
 It worked! Check on your phone, you should have a new message!
 
