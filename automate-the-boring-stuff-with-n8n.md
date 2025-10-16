@@ -1303,12 +1303,12 @@ need an API key from the `Google AI Studio`:
 
 - When done, click `Create key` from the `Create a new key` dialog.
 
-  <img src="./img/google-ai-studio-keys.png" width=50%>
+  <img src="./img/google-ai-studio-keys.png" width=70%>
 
 - To copy the API Key, click on the link under the `Key` column on the `API Keys`
   page. A pop-up window `API key details` will appear. Copy the API key:
 
-  <img src="./img/google-ai-studio-api-key-details.png" width=50%>
+  <img src="./img/google-ai-studio-api-key-details.png" width=70%>
 
 - Go back to the n8n window.
 - Paste the API key inside the `API key` field of the Gemini Node Api account
@@ -1368,6 +1368,10 @@ cd ~/web
 ```
 
 First, we'll build a very simple web server that will serve one static file:
+
+```shell
+nano compose.yml && cat $_
+```
 
 ```yaml
 services:
