@@ -179,7 +179,7 @@ engine. Let's check it out:
 If everything works, we should see the Docker version information.
 
 ```shell
-Docker version 28.4.0, build d8eb465
+Docker version 28.5.1, build e180ab8
 ```
 
 Now, let's check for any running containers:
@@ -212,8 +212,10 @@ our initial group.
 > [!Note]
 > This is not a permanent change, and it affects only our current session.
 
-```bash
+```shell
 newgrp docker
+```
+```shell
 groups
 ```
 
