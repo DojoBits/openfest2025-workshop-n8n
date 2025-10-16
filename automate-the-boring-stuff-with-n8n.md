@@ -1007,7 +1007,7 @@ top right corner. Next, we'll change the City. Under the `City` field, specify
 the desired city, for example, `Sofia,BG`. Click on the `Execute step` button at
 the top of the window:
 
-<img src="./img/n8n-get-weather.png" width=50%>
+<img src="./img/n8n-get-weather.png" width=100%>
 
 On the right-hand side, in the `OUTPUT` section, we see the information that
 we've received back from the cloud service - coordinates, weather description,
