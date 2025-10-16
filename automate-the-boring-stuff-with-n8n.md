@@ -258,7 +258,8 @@ configuration with the following environment variables:
 - DB_POSTGRESDB_USER=${POSTGRES_USER}
 - DB_POSTGRESDB_PASSWORD=${POSTGRES_PASSWORD}
 
-> [!Note] An external database like PostgreSQL is recommended if we need to
+> [!Note] 
+> An external database like PostgreSQL is recommended if we need to
 > scale (user concurrency, handle multiple workers with distributed processing),
 > run in production (performance), or support multi-user features, among others.
 
@@ -276,7 +277,8 @@ cd ~/n8n
 By default, n8n doesn't generate self-signed certificates when a container is created,
 so we'll generate one explicitly:
 
-> [!Note] This certificate will be self-signed (untrusted). If you own
+> [!Note] 
+> This certificate will be self-signed (untrusted). If you own
 > a registered DNS name, it is fairly easy to generate a signed/trusted certificate
 > using the free and public Let's Encrypt service through the ACME client. This
 > could be done in various ways, including by using a reverse proxy like
@@ -424,7 +426,8 @@ Let's quickly cover some of the environment variables:
   disable debug-level logging, set secure defaults, etc. We can also set it to
   `development`.
 
-> [!Note] Langfuse is an open-source LLM (Large Language Model) engineering
+> [!Note] 
+> Langfuse is an open-source LLM (Large Language Model) engineering
 > platform that provides end-to-end observability, collaborative prompt management,
 > structured evaluation pipelines, tracing of API/model calls, dataset management,
 > and analytics like cost, latency, and quality. Inside n8n Langfuse enables
@@ -523,8 +526,8 @@ though, we don't have a dedicated DNS server.
 If you want to test the access to the N8N server from the hands-on machine using
 its DNS name, please run the following command to update the local resolver configuration:
 
-> [!Note] Please substitute the <Hands-On-IP> placeholder with your hands-on machine
-> IP address
+> [!Note]
+> Please substitute the <Hands-On-IP> placeholder with your hands-on machine IP address
 
 ```shell
 echo "<Hands-On-IP> n8n.mydomain.com" | sudo tee -a /etc/hosts
@@ -579,7 +582,8 @@ we have a few options:
       `Ctrl + S`.
     - Close Notepad
 
-> [!Note] As we are using a self-signed certificate for this workshop, it doesn't
+> [!Note] 
+> As we are using a self-signed certificate for this workshop, it doesn't
 > really matter which approach you would prefer
 
 Let's now try to access the n8n web UI for the first time. In a web browser
@@ -611,8 +615,8 @@ overview page:
 
 n8n is an open-source (source available) project. It is a node-based workflow
 automation platform that anyone
-You can self-host for free, and the entire source code is publicly available on [GitHub](https://github.com/n8n-io/n8n). By October 2025, it had more than 147k stars, and it had been forked
-over 45.6k times!
+You can self-host for free, and the entire source code is publicly available on [GitHub](https://github.com/n8n-io/n8n). 
+By October 2025, it had more than 147k stars, and it had been forked over 45.6k times!
 Organizations and developers use n8n for building automations, integrations, and
 AI-powered workflows with complete control over their data and deployment.
 
@@ -648,11 +652,13 @@ which you'll receive an activation code.  Click `Send me a free license key`
 to confirm. If you already have the key, you can use the `Enter activation key`
 button from the `Usage and plan` page to enter it.
 
-> [!Note] In this workshop, we'll be using mostly the `non-paid` features, but we'll
+> [!Note] 
+> In this workshop, we'll be using mostly the `non-paid` features, but we'll
 > also reference some of the features requiring a community license to
 > demonstrate the available functionality.
 
-> [!Note] In case you decide to apply for a free license key, it might take
+> [!Note]
+> In case you decide to apply for a free license key, it might take
 > a few minutes until you receive a confirmation email with the key.
 
 
@@ -661,7 +667,8 @@ button from the `Usage and plan` page to enter it.
 Before we dive deeper into n8n, let's start with some fundamental terminology
 that we'll be meeting often:
 
-> [!Note] Please feel free to skip those if you are already familiar
+> [!Note]
+> Please feel free to skip those if you are already familiar
 
 - `Automation`: The process of using technology (like n8n workflows) to perform
   repetitive or routine tasks without manual intervention, improving efficiency
@@ -783,7 +790,8 @@ Another good alternative is github. Check the Github Topic [#n8n-templates](http
 which returns multiple repositories with curated n8n templtes, like: [Awesome n8n templates](https://github.com/enescingoz/awesome-n8n-templates)
 
 
-> [!Warning] The quality of the pre-made templates might vary. Some of the
+> [!Warning] 
+> The quality of the pre-made templates might vary. Some of the
 > templates may seem confusing, have issues, or be missing some functionality.
 
 ## Task 4.2 Using n8n templates
@@ -796,7 +804,8 @@ Daily Weather Reports with OpenWeatherMap and Telegram Bot
 
 Inside the n8n workflow catalog page, type the above template name.
 
-> [!Note] You could also search by a keyword in the catalog or by category.
+> [!Note] 
+> You could also search by a keyword in the catalog or by category.
 Look around and explore what is already available.
 
 The template we are [looking for](https://n8n.io/workflows/?q=+Daily+Weather+Reports+with+OpenWeatherMap+and+Telegram+Bot) should be the first one in the result:
@@ -834,7 +843,8 @@ below the template name: `Use for free`. In the `Use template` pop-up, click on
 the first option: `Copy template to clipboard [JSON]`, then paste it inside your
 terminal window with the opened nano editor.
 
-> [!Note] If you prefer, you could also use a local text editor like Notepad on
+> [!Note] 
+> If you prefer, you could also use a local text editor like Notepad on
 > your machine.
 
 We are not going to spend much time here, as we are going to work mainly with the
@@ -899,7 +909,8 @@ note, before we start using the workflow, we have to:
 - Change the Workflow state from `Inactive` to `Active` to enable the
   automated workflow execution whenever the trigger node (schedule) condition is met.
 
- > [!Note] When a workflow is activated, n8n starts continuously monitoring for events,
+ > [!Note] 
+ > When a workflow is activated, n8n starts continuously monitoring for events,
  > schedules, or triggers that would start the workflow without requiring manual
  > intervention. Newly created workflows are inactive by default. Switching to
  > the active state enables the automation.
@@ -916,7 +927,8 @@ Leave the OpenWeather browser tab open. We'll need the generated api key in a mo
 
 Next, let's get the required Telegram credentials from within the Telegram app.
 
-> [!Note] For this step, we'll need a telegram registration. This can be done on
+> [!Note] 
+> For this step, we'll need a telegram registration. This can be done on
 > a cell phone by installing the Telegram app from the Play or App store, or using
 > Telegram Desktop app (the registration requires a SMS verification code (usually free)).
 
@@ -965,7 +977,8 @@ Under `Tigger Times`, set mode to `Every X`, with value to `5` and unit to `Minu
 
 <img src="./img/n8n-shedule-triger-cron.png" width=50%>
 
-> [!Note] You can add multiple trigger times. Just click on the `Add Cron Time`
+> [!Note] 
+> You can add multiple trigger times. Just click on the `Add Cron Time`
 > button set them accordingly
 
 Navigate back to the main canvas by clicking on the `Back to canvas` button in the
@@ -1005,8 +1018,9 @@ keep passing the currently configured output data. Using this option is also han
 when an external system triggers your workflow and you don't want to use
 it every time you test your workflow.
 
-> [!Note] When data pinning is active, a banner appears at the top of the node's
->  output panel indicating that n8n has pinned the data. To unpin data and fetch
+> [!Note] 
+> When data pinning is active, a banner appears at the top of the node's
+> output panel indicating that n8n has pinned the data. To unpin data and fetch
 > fresh data on the next execution, select the Unpin link in the banner.
 
 Let's return to the main canvas by clicking on the `Back to canvas` button. Notice
@@ -1022,10 +1036,12 @@ abstract. Having a bit of programming knowledge can help us a lot
 in doing interesting data manipulations, filtering, and formatting the data in just
 the right way we need it.
 
-> [!Note] If you don't have any programming experience, you can use a
+> [!Note]
+> If you don't have any programming experience, you can use a
 > trusted AI assistant to reason about the code, modify it, or generate it altogether.
 
-> [!Warning] Even the bigger models are not perfect and sometimes they do make
+> [!Warning]
+> Even the bigger models are not perfect and sometimes they do make
 > mistakes. Please test such code thoroughly before using it.
 
 Quick code overview. We receive the input data in the json serialization form
@@ -1046,7 +1062,8 @@ to the constants that hold the actual data. Before the message is passed to the
 next node, the references to the constants (like ${sunset}) will be dynamically
 replaced with the actual values.
 
-> [!Note] In programming, call this dynamic replacement of value references (placeholders)
+> [!Note]
+> In programming, call this dynamic replacement of value references (placeholders)
 > string interpolation
 
 We return the mini script with the statement:
@@ -1097,7 +1114,8 @@ from the input data of the node.​
 This technique lets nodes reuse and pass along output from previous nodes in a
 workflow.
 
-> [!Note] you don't have to write that {{ }} expression manually. Erase the
+> [!Note]
+> you don't have to write that {{ }} expression manually. Erase the
 > content of the `Text` field, click with your mouse on the `message` keyword
 > in the INPUT section, and drag it over the `Text` field. The field will automatically
 > populated. We could use this technique in multiple places across the n8n
@@ -1134,7 +1152,8 @@ options:
 
 Let's tweak it a bit and save it:
 
-> [!Note] We don't have an Error Workflow at this point
+> [!Note]
+> We don't have an Error Workflow at this point
 
 <img src="./img/n8n-workflow-settings.png" width=50%>
 
@@ -1176,14 +1195,16 @@ empty workflow canvas will be created called `My workflow`. Click on the workflo
 name in the upper left corner of the screen and change the workflow name to:
 `lunch-menu`.
 
-> [!Note] Certain tasks like renaming the workflow can be done in multiple ways.
+> [!Note]
+> Certain tasks like renaming the workflow can be done in multiple ways.
 > For example, you could also select the `...` menu item from the top right
 > corner of the screen and select `Rename` from there.
 
 According to our requirement, we'll have to trigger the workflow periodically on
 schedule. Which node should we use?
 
-> [!Note] While it is possible to trigger the workflow immediately after the Google Sheet
+> [!Note]
+> While it is possible to trigger the workflow immediately after the Google Sheet
 is updated, we want to keep the example workflow simple.
 
 Click on the `+` sign in the upper right-hand side of our workflow canvas. A
@@ -1200,13 +1221,15 @@ did in the previous task, then return to the main canvas. As we are working
 on a workflow that will use AI Agent, we'll also add a second trigger to our
 workflow.
 
-> [!Note] We can have simultaneously multiple trigger sources for our workflows.
+> [!Note]
+> We can have simultaneously multiple trigger sources for our workflows.
 
 Add a new node called `Chat Trigger` on the canvas, skipping its configuration.
 Having the triggers, next we'll add a new node called `AI Agent`, to the canvas
 again skipping its configuration.
 
-> [!Note] The AI Agent node in n8n lets workflows perform autonomous,
+> [!Note]
+> The AI Agent node in n8n lets workflows perform autonomous,
 > intelligent decision-making using large language models or specialized AI tools.
 > Its main purpose is to act as a "brain" within a workflow, sensing data,
 > reasoning on input, and triggering the right actions to meet goals.
@@ -1245,7 +1268,8 @@ for all reasoning tasks. There is a great variety of options to choose from:
 In this workshop, we'll see how we can use the Google Gemini 2.5 Flash model with
 their free tier.
 
-> [!Note] It is very easy to switch to an alternative model; we need to pick
+> [!Note]
+> It is very easy to switch to an alternative model; we need to pick
 > a different Chat Model node.
 
 In the sidebar, look for a node called `Google Gemini Chat Model` and add it to the
@@ -1263,7 +1287,8 @@ need an API key from the `Google AI Studio`:
 - Our key should be related to a project. From the drop-down menu, click on
   `Create project`, and name your project - `n8n workshop`. Click `Create project`.
 
-> [!Note] A Google AI Studio API key must be related to a project because each
+> [!Note] 
+> A Google AI Studio API key must be related to a project because each
 > key is a unique credential that controls access, billing, usage, and security
 > settings tied to a specific Google Cloud project. This structure ensures proper
 > resource management, permission control, and separation of responsibilities
@@ -1286,11 +1311,13 @@ need an API key from the `Google AI Studio`:
 If the key works, you should get a green banner: `Connection tested successfully`.
 Close the credential dialog and get back to the main canvas.
 
-> [!Note] Security tip: Never share your API key publicly, and rotate it if compromised.
+> [!Note] 
+> Security tip: Never share your API key publicly, and rotate it if compromised.
 > If you run into "quota" or "permissions" issues, try generating a new key or
 > checking your Google AI Studio account access.
 
-> [!Warning] The Google Gemini API free tier has rate limits. More details you
+> [!Warning]
+> The Google Gemini API free tier has rate limits. More details you
 > can find [here](https://ai.google.dev/gemini-api/docs/rate-limits)
 
 The `AI Agent` node has some node-specific connectors besides the input and output:
@@ -1352,7 +1379,8 @@ services:
 
 Next, we'll add the initial version of our web page.
 
-> [!Note] Usually, we should be using some version control system for
+> [!Note]
+> Usually, we should be using some version control system for
 > source code artifacts, but we want to keep the example simple
 
 ```shell
@@ -1505,7 +1533,8 @@ a few more things we want to do:
 - Add Memory
 - Provide instructions - system prompt.
 
-> [!Note] We've already discussed what a system prompt and memory function are,
+> [!Note]
+> We've already discussed what a system prompt and memory function are,
 > and what are the major components of the system prompt back in Task 4.
 
 For our job, we'll add a `Simple Memory` node to the workflow. It will be used to
@@ -1531,7 +1560,8 @@ and under option slick `Add Option` and select `System Message`.
 
 Replace the default system message with this more optimized one:
 
->[!Note] Please replace the <hands-on-ip> placeholders with yoru real hands-on
+>[!Note]
+> Please replace the <hands-on-ip> placeholders with yoru real hands-on
 > machine IP address.
 
 ```text
@@ -1669,8 +1699,8 @@ AI Agent node and look up the `Google Sheets Tool`. Rename the tool to:
 Under `Credential to connect with`, create a new credential. Next, open a new
 tab in your web browser and visit the Google Cloud Console: https://console.cloud.google.com
 
-
-> [!Note] Google Cloud Platform (GCP) is a suite of cloud computing services
+> [!Note]
+> Google Cloud Platform (GCP) is a suite of cloud computing services
 > offered by Google. It provides on-demand infrastructure, tools, and managed
 > services for building, deploying, and scaling applications and workloads.
 > Google Cloud Console is the web-based graphical user interface (GUI) used to
@@ -1678,7 +1708,8 @@ tab in your web browser and visit the Google Cloud Console: https://console.clou
 
 To generate a new API key, we'll need to use a `Google Cloud Project`.
 
-> [!Note] A Google Cloud project is a core organizational unit within Google Cloud
+> [!Note]
+> A Google Cloud project is a core organizational unit within Google Cloud
 > Platform (GCP) where we manage, organize, and isolate your cloud resources,
 > services, and billing.
 
@@ -1727,7 +1758,8 @@ it in the result list, then click `Enable`
 
 While in the `APIs & Services` page, select `OAuth consent screen`, then `Get started`.
 
-> [!Note] The OAuth consent screen in Google Cloud is used to inform users about
+> [!Note]
+> The OAuth consent screen in Google Cloud is used to inform users about
 > what your application or workflow is requesting access to when it uses Google APIs
 > (like Google Sheets or Drive) through OAuth 2.0 authentication.
 
@@ -1744,7 +1776,8 @@ it. Click Continue.
 Almost done! Next, click on the `Create OAuth client` button to create a new
 client ID that will be used by n8n as an identity against Google's OAuth Services.
 
-> [!Note] Google OAuth service is Google's implementation of the OAuth 2.0
+> [!Note]
+> Google OAuth service is Google's implementation of the OAuth 2.0
 > authentication and authorization protocol. It allows apps, websites, and workflows
 > to securely request access to a user's Google account data (such as Gmail, Drive,
 > Sheets, Contacts, etc.) without needing the user's password.
@@ -1761,8 +1794,8 @@ client ID that will be used by n8n as an identity against Google's OAuth Service
 A pop-up `OAuth client created` will be shown. Copy the `Client ID` and the
 `Client secret`. And click `OK`.
 
-> [!Warning] you won't be able to view the secret anymore after you acknowledge
-> this dialog!
+> [!Warning]
+> You won't be able to view the secret anymore after you acknowledge this dialog!
 
 The Google Web Application that we've just configured has not yet completed the
 Google's OAuth verification process is currently in testing mode. By default,
@@ -1797,7 +1830,8 @@ a banner will appear at the top of the page:
 
 <img src="./img/n8n-google-account-connected.png" width=50%>
 
-> [!Note] If you don't see the banner immediately, close the edit credentials dialog
+> [!Note]
+> If you don't see the banner immediately, close the edit credentials dialog
 > and select the edit button next to the newly created Google Sheet account
 > credential.
 
@@ -1843,7 +1877,9 @@ As we've seen most of the steps previously, we'll outline the main goals:
 - Add an `SSH` -> `Execute a command` node to the canvas.
 - Configure the credential using the <hands-on-ip>, username (ubuntu) and private
   key.
-  > [!Note] The SSH key is not protected with a passphrase
+  
+> [!Note] 
+> The SSH key is not protected with a passphrase
 
 - Name the node: `SSH tool`
 - Convert the node to a sub-workflow
@@ -1946,7 +1982,8 @@ Click on the `Add field` to add a second one:
 - Type: String
 - Value: SCHEDULED_JOB_{{$execution.id}}
 
-> [!Note] execution.id refers to the unique identifier assigned to each workflow
+> [!Note]
+> execution.id refers to the unique identifier assigned to each workflow
 > run (execution). Every time a workflow is triggered—whether by user action,
 > schedule, webhook, or any other trigger—n8n creates a new execution record,
 > and that execution is given a unique ID (usually a UUID or numeric string).
@@ -2005,10 +2042,10 @@ in the workflow designer. When an event/message is received from the MCP server,
 on the trigger endpoint, n8n automatically starts the workflow, and all nodes
 “downstream” will receive the event data (chatInput, sessionID, etc.).
 
-> [!Note] The workflow is stored internally as a directed acyclic graph (DAG).
+> [!Note]
+> The workflow is stored internally as a directed acyclic graph (DAG).
 > Even though we don’t see wires, all nodes "placed after" or "added beneath" the
 > trigger in the editor are automatically scheduled to execute after the trigger fires.
-
 
 Add an MCP Server Trigger node somewhere on the workflow canvas.
 
