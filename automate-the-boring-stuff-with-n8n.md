@@ -1095,7 +1095,7 @@ statement.
 Click on `Back to canvas` to return to the main workflow. We've one more node
 to configure - `Send a text message`. Click on it to open its configuration.
 For this node, we have to create a new credential (from the credential drop-down menu)
-and populate the access token we've got from our Telegram chat. Upon clicking
+and populate the access (API) token we've got from our Telegram chat. Upon clicking
 `Save`, you should get a confirmation that the connection was tested successfully.
 close the credential dialog (X). In the main `Send a text message` node settings
 window, set the value for the Chat ID that we've extracted earlier. Click on
@@ -1162,7 +1162,7 @@ Let's tweak it a bit and save it:
 > [!Note]
 > We don't have an Error Workflow at this point
 
-<img src="./img/n8n-workflow-settings.png" width=50%>
+<img src="./img/n8n-workflow-settings.png" width=70%>
 
 
 Do we miss something? Right! Please check whether you've received automated notifications
