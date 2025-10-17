@@ -1871,8 +1871,10 @@ be listed:
 - Description
 - Price
 
-> [!Note] You can populate the sheet manually with data from our current web page,
-> or use the lunch menu spreadsheet available under the src directory.
+> [!Note] 
+> You can populate the sheet manually with data from our current web page,
+> or use the lunch menu spreadsheet available under the src sub-directory in the 
+> git repository directory.
 
 Return to the n8n Google Sheet tool window. Under the section Document, click on
 the drop-down menu and select: `Daily menu`. Under Sheet, click on the icon with
