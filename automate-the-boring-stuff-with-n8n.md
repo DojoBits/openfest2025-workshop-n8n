@@ -1876,17 +1876,19 @@ be listed:
 > or use the lunch menu spreadsheet available under the src sub-directory in the 
 > git repository directory.
 
-Return to the n8n Google Sheet tool window. Under the section Document, click on
-the drop-down menu and select: `Daily menu`. Under Sheet, click on the icon with
-stars next to the drop-down menu. Leave the model to choose the Sheet
-that it will use automatically.
+Return to the n8n Google Sheet tool window. Under the section Document click on 
+the drop-down menu and select: `Daily menu`. Leave the filter `From list`. 
 
-<img src="./img/n8n-google-sheet-tool-configured.png" width=50%>
+Under the section Sheet, click on the icon with stars next to the drop-down menu. 
+This delegates the responsibility to select automatically the correct Sheet to the model.
+Change the filter type to: `By Name`.
+
+<img src="./img/n8n-google-sheet-tool-configured.png" width=70%>
 
 We are done! Get back to the main canvas. Make sure the Google Sheet tool is
 connected to the AI Agent:
 
-<img src="./img/n8n-google-sheet-tool-connected.png" width=50%>
+<img src="./img/n8n-google-sheet-tool-connected.png" width=70%>
 
 Next, we'll see how we can give the AI Agent SSH access to the server running
 our web server. In our case, that will be the hands-on machine.
