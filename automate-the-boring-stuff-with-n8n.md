@@ -1825,8 +1825,8 @@ n8n now, we'll get an error:
 
 - Inside the `Google Console` browser tab ->  APIs & Services > OAuth consent screen.
 - Switch to the `Audience` section. Currently, our app is in development, so the
-  Publishing status is `Testing`. That is expected. Let's authenticate our use to
-  access it by adding him to the Test users. Click `Add users`,  and enter your
+  Publishing status is `Testing`. That is expected. Let's authenticate our user to
+  access it by adding it to the list of Test users. Click `Add users`,  and enter your
   e-mail address. Click `Save`.
 
 Your e-mail address should now be present under the `Test users` section.
