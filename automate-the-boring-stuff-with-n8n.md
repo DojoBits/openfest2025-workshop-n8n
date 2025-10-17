@@ -1649,23 +1649,30 @@ and retrieve the content. This functionality is already available in n8n. We hav
 a node called `HTTP Request`. Please find it in the sidebar and add it to the
 canvas.
 
-In the node configuration, we can specify an HTTP method. The default `GET` will
-retrieve the content of a web page - exactly what we need. Uspecify the Menu
-Server url under: `URL`: http://<hands-on-ip>:8080, and run `Execute step` to
-validate. Finally, rename the node to `HTTP tool` by clicking on the title in
-the configuration section.
+In the `HTTP Request` node configuration, we can specify an HTTP method. The default `GET` will
+retrieve the content of a web page - exactly what we need. Specify the URL
+for the web server hosting the lunch menu page in the URL field: http://\<hands-on-ip>:8080, 
+and run `Execute step` to validate. Finally, rename the node to `HTTP tool` by clicking on 
+the title in the configuration section.
 
-Return to the main canvas. We have an HTTP tool node. Next, we'll convert it to
-an agent tool and attach it to the agent.
+Return to the main canvas. We can't simly attach a regular n8n nodes as AI Agent tools,
+but we'll demonstrate one technique that will enable us to do that and give us more 
+flexibility in case we want to customize the behaviour of the HTTP Request node
+when used as an AI Agen tool:
+
+> [!Note]
+> HTTP Request is a very popular AI Agent tool. There is pre-made one we could have
+> also used directly if we have initially clicked on the AI Agent Tool connector and looked for
+> `HTTP Request Tool`, or directly selected it from the node sidebar. 
 
 - Right-click on the HTTP tool node. From the sub-menu select: `Convert node to sub-workflow`
 - Name the sub-workflow: `HTTP tool`
-- Click Confirm
+- Click `Confirm`
 
 <img src="./img/http-node-convert-workflow.png" width=50%>
 
-doing so did the following things.
-- A new workflow called `HTTP tool` will be created, containing our HTTP tool node
+By doing so we:
+- Created a new workflow called `HTTP tool`, containing our HTTP tool node
 - Our original node HTTP tool was replaced with a new node: `Call HTTP tool` that
   triggers the new `HTTP tool` workflow.
 
@@ -1676,10 +1683,11 @@ Click on the third leg of the AI Agent - `Tool`. The node sidebar will appear,
 allowing us to select a tool. On the very top, there is a tool called:
 `Call n8n Workflow Tool`. YES! We can use n8n workflows as AI agent tools!
 Now you should see where we are headed. Select that tool and under `Workflow`,
-choose `HTTP tool` from the drop-down menu. Rename the tool to HTTP tool.
+choose `HTTP tool` from the drop-down menu. Rename the tool from: Call 'HTTP tool'
+to `HTTP tool`.
 
 Get back to the main canvas. Save the current workflow. Navigate to the n8n
-overview page and open the HTTP tool. Make sure the trigger `Start` is
+overview page and open the new HTTP tool workflow. Make sure the trigger `Start` is
 connected with the `HTTP tool` node:
 
 <img src="./img/n8n-http-tool-workflow.png" width=50%>
