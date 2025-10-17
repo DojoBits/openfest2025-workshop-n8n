@@ -2025,8 +2025,8 @@ The workflow was triggered successfully!
 In the first task, we've seen how we can use the Telegram node to send messages
 from our automation.
 
-Add a new node `Send a chat action`, set the Chat ID property with the value from
-the first task, and connect it to the AI Agent output. Now let's re-run the
+Add a new node `Send a chat action`, set the `Chat ID` property with the value we've got from
+the first task, set the `Operation` type to `Send Messasge` and connect it to the AI Agent output. Now let's re-run the
 workflow again. Click on the `Send a text message` node.
 
 Now that we've re-run the workflow, we have an input parameter passed
